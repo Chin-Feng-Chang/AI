@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #12121d;
+    color: #e4e1f0;
+    overscroll-behavior: none;
+  }
+}
+
+@layer utilities {
+  .halftone-cyan {
+    background-image: radial-gradient(#00eefc 1.5px, transparent 1.5px);
+    background-size: 8px 8px;
+  }
+  .halftone-pink {
+    background-image: radial-gradient(#ff4a8e 1px, transparent 1px);
+    background-size: 6px 6px;
+  }
+  .halftone-grid {
+    background-image: radial-gradient(#00eefc 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+  .chamfer-tr {
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+  }
+  .manga-border {
+    border: 2px solid #000000;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d17;
+  border-left: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff4a8e;
+  border: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00eefc;
+}
